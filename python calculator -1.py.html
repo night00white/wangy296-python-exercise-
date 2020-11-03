@@ -1,0 +1,116 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Creative Coding- Python Exercise 1: calcultor 
+
+# In[1]:
+
+
+# Psuedocoding:
+# Try to make a small calculator operation that generate basic function like a real life calculator;
+# General mathematical information is first laying out;
+# Add if conditional statement and multiple conditional statment as well;
+# Operation settings that could let the user to enter their numbers manually;
+
+
+# In[2]:
+
+
+def add(q,p):
+    return q + p
+
+
+# In[3]:
+
+
+def subtract(q, p):
+    return q - p
+
+
+# In[4]:
+
+
+def multiply(q, p):
+    return q * p
+
+
+# In[ ]:
+
+
+def divide(q, p):
+    return q / p
+
+
+# In[5]:
+
+
+q = 10 
+p = 20
+
+if q-p < p-q:
+    print("(q-p)is less than (p-q)")
+else: 
+    print("(q-p is greater than (p-q) ")
+
+
+# In[6]:
+
+
+q = 100
+p = 400
+
+if q * p < 1000:
+    print("result is smaller than 1000.")
+elif q * p > 100000:
+    print("result is bigger than 1000.")
+elif q*p == 40000:
+    print("result is 40000!")
+else:
+    print("we don't know what result is")
+
+
+# In[9]:
+
+
+print("Select operation.")
+print("1.+")
+print("2.-")
+print("3.*")
+print("4./")
+
+while True:
+    # Take input from the user
+    choice = input("Enter choice('+', '-', '*', '/'): ")
+
+    # Check if choice is one of the four options
+    if choice in ('+', '-', '*', '/'):
+        num1 = float(input("Enter user's first number choice: "))
+        num2 = float(input("Enter user's second number choice: "))
+
+        if choice == '+':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '-':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '*':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '/':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        break
+    else:
+        print("Invalid Input")
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
